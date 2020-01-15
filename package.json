@@ -1,0 +1,35 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jo12bar/cv.git"
+  },
+  "author": "Johann Barnard <johann.b@telus.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jo12bar/cv/issues"
+  },
+  "homepage": "https://github.com/jo12bar/cv#readme",
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "husky": "^4.0.9",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "touch .commit",
+      "post-commit": "if [ -e .commit ]; then rm .commit; webpack; git add assets/generated; git commit --amend -C HEAD --no-verify; fi"
+    }
+  }
+}
