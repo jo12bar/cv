@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="{{ "/assets/generated/bundle.css" | relative_url }}">
 
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
@@ -13,5 +15,7 @@
   <body>
     {% include navigation.html %}
     {{ content }}
+
+    <script src="{{ "/assets/generated/bundle.js" | relative_url }}" async></script>
   </body>
 </html>

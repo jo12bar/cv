@@ -1,7 +1,8 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 module.exports = [{
-  entry: './webpack/webpack-styles.scss',
+  entry: ['./webpack/webpack-styles.scss', './webpack/app.js'],
   output: {
     path: path.resolve(__dirname, 'assets/generated/'),
     filename: 'bundle.js',
@@ -19,9 +20,29 @@ module.exports = [{
           },
           { loader: 'extract-loader' },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ]
-      }
-    ]
-  }
-}]
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()],
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: ['./node_modules'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['@babel/preset-env'],
+        },
+      },
+    ],
+  },
+}];

@@ -17,11 +17,16 @@
   },
   "homepage": "https://github.com/jo12bar/cv#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "extract-loader": "^3.1.0",
     "file-loader": "^5.0.2",
     "husky": "4.0.7",
     "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
@@ -31,5 +36,9 @@
       "pre-commit": "touch .commit",
       "post-commit": "if [ -e .commit ]; then rm .commit; webpack; git add assets/generated; git commit --amend -C HEAD --no-verify; fi"
     }
+  },
+  "dependencies": {
+    "@material/button": "^4.0.0",
+    "@material/ripple": "^4.0.0"
   }
 }
