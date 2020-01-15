@@ -1,6 +1,7 @@
 <nav>
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" class="nav-link{% if page.url == item.link %} current-page{% endif %}">
+    {%- assign actual_link = item.link | relative_url -%}
+    <a href="{{ actual_link }}" class="nav-link{% if page.url == actual_link %} current-page{% endif %}">
       {{ item.name }}
     </a>
   {% endfor %}
