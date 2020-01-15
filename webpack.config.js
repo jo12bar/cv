@@ -1,7 +1,10 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 
+const mode = process.env.NODE_ENV == 'production' ? 'production' : 'development';
+
 module.exports = [{
+  mode,
   entry: ['./webpack/webpack-styles.scss', './webpack/app.js'],
   output: {
     path: path.resolve(__dirname, 'assets/generated/'),

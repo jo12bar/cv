@@ -34,7 +34,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "touch .commit",
-      "post-commit": "if [ -e .commit ]; then rm .commit; webpack; git add assets/generated; git commit --amend -C HEAD --no-verify; fi"
+      "post-commit": "if [ -e .commit ]; then rm .commit; NODE_ENV=production webpack; git add assets/generated; git commit --amend -C HEAD --no-verify; fi"
     }
   },
   "dependencies": {
