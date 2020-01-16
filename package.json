@@ -42,6 +42,7 @@
   "dependencies": {
     "@material/button": "^4.0.0",
     "@material/drawer": "^4.0.0",
+    "@material/elevation": "^4.0.0",
     "@material/icon-button": "^4.0.0",
     "@material/list": "^4.0.0",
     "@material/ripple": "^4.0.0",

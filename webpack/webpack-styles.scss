@@ -6,11 +6,7 @@
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
 @import "@material/icon-button/mdc-icon-button";
-
-.foo-button {
-  @include mdc-button-ink-color($mdc-theme-primary);
-  @include mdc-states($mdc-theme-primary);
-}
+@import "@material/elevation/mdc-elevation";
 
 body {
   background: #f5f5f5;
@@ -42,3 +38,45 @@ h3 { @include mdc-typography(headline3); }
 h4 { @include mdc-typography(headline4); }
 h5 { @include mdc-typography(headline5); }
 h6 { @include mdc-typography(headline6); }
+
+a {
+  color: $mdc-theme-primary-dark;
+}
+
+.headshot-image {
+  height: 16rem;
+  width: 16rem;
+  object-fit: cover;
+  object-postion: 50% 50%;
+  border-radius: 100%;
+}
+
+// Drawer header:
+.mdc-drawer__header {
+  .headshot-image {
+    display: block;
+    height: 9rem;
+    width: 9rem;
+    margin: 40px auto;
+  }
+
+  h1, h2 { text-align: center; }
+  h1 { @include mdc-typography(headline5); }
+  h2 { @include mdc-typography(subtitle2); }
+
+  p {
+    @include mdc-typography(body2);
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

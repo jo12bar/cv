@@ -16,8 +16,12 @@ $mdc-shape-large-component-radius: 0px;
 // Primary colors ($mdc-theme-primary) map to components such as app bars and
 // buttons, while secondary colors ($mdc-theme-secondary) are used as accents on
 // components such as FABs and selection controls.
-$mdc-theme-primary: #1976d2;
-$mdc-theme-secondary: #ffbf00;
+$mdc-theme-primary:       #1976d2;
+$mdc-theme-primary-light: #63a4ff;
+$mdc-theme-primary-dark:  #004ba0;
+$mdc-theme-secondary:       #ffbf00;
+$mdc-theme-secondary-light: #fff14e;
+$mdc-theme-secondary-dark:  #c78f00;
 
 // Theme background ($mdc-theme-background) appears behind scrollable content.
 // Surface color ($mdc-theme-surface) is mapped to the surface of components

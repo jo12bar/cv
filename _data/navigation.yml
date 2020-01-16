@@ -1,6 +1,6 @@
-- name: Home
-  link: /
-  icon: home
 - name: About
-  link: /about.html
+  link: /
   icon: person
+- name: Experience
+  link: experience.html
+  icon: work
