@@ -23,10 +23,12 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "extract-loader": "^3.1.0",
+    "fibers": "^4.0.2",
     "file-loader": "^5.0.2",
     "husky": "4.0.7",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
+    "sass": "^1.24.4",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
@@ -39,6 +41,12 @@
   },
   "dependencies": {
     "@material/button": "^4.0.0",
-    "@material/ripple": "^4.0.0"
+    "@material/drawer": "^4.0.0",
+    "@material/icon-button": "^4.0.0",
+    "@material/list": "^4.0.0",
+    "@material/ripple": "^4.0.0",
+    "@material/top-app-bar": "^4.0.0",
+    "@material/typography": "^4.0.0",
+    "resize-observer-polyfill": "^1.5.1"
   }
 }

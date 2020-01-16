@@ -1,7 +1,17 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link | relative_url }}" class="nav-link{% if page.url == item.link %} current-page{% endif %}">
-      {{ item.name }}
-    </a>
-  {% endfor %}
-</nav>
+<aside class="mdc-drawer cv-drawer">
+  <div class="mdc-drawer__content">
+    <nav class="mdc-list">
+      {% for item in site.data.navigation %}
+        <a
+          href="{{ item.link | relative_url }}"
+          class="nav-link mdc-list-item{% if page.url == item.link %} current-page mdc-list-item--activated{% endif %}"
+          {% if page.url == item.link %}aria-current="page"{% endif %}>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{{ item.icon }}</i>
+          <span class="mdc-list-item__text">{{ item.name }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>

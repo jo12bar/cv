@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel="stylesheet" href="{{ "/assets/generated/bundle.css" | relative_url }}">
@@ -12,9 +13,25 @@
 
     {{ seo }}
   </head>
-  <body>
+  <body class="mdc-typography">
     {% include navigation.html %}
-    {{ content }}
+
+    <div class="mdc-drawer-app-content">
+
+      <header class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="#" class="cv-menu material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</a>
+          </section>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="mdc-top-app-bar--short-fixed-adjust">
+          {{ content }}
+        </div>
+      </main>
+    </div>
 
     <script src="{{ "/assets/generated/bundle.js" | relative_url }}" async></script>
   </body>

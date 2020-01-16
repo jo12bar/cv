@@ -1,4 +1,6 @@
 - name: Home
   link: /
+  icon: home
 - name: About
   link: /about.html
+  icon: person
