@@ -57,7 +57,12 @@ a {
     display: block;
     height: 9rem;
     width: 9rem;
-    margin: 40px auto;
+    margin: 30px auto;
+    @media (max-width: $breakpoint-sm) {
+      height: 4.5rem;
+      width: 4.5rem;
+      margin: 20px auto;
+    }
   }
 
   h1, h2 { text-align: center; }
