@@ -1,6 +1,4 @@
-@import "theme";
-
-// This should be imported first!
+@import "theme"; // This should be imported first!
 
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
@@ -11,127 +9,121 @@
 @import "@material/elevation/mdc-elevation";
 
 body {
-	background: #f5f5f5;
-	display: flex;
-
-	// Removes top gap between modal and viewport
-	min-height: 100vh;
-
-	// Ensures that permanent drawer extends to bottom of viewport
-	margin: 0;
-
-	// Removes top gap between app bar and viewport
+  background: #f5f5f5;
+  display: flex;     // Removes top gap between modal and viewport
+  min-height: 100vh; // Ensures that permanent drawer extends to bottom of viewport
+  margin: 0;         // Removes top gap between app bar and viewport
 }
 
 .main-content {
-	margin: 20px 50px;
+  margin: 20px 50px;
 }
 
 // BREAKPOINT min-width: $breakpoint-sm
 .mdc-top-app-bar {
-	display: none;
+  display: none;
 }
 
 // BREAKPOINT max-width: $breakpoint-sm
 @media (max-width: $breakpoint-sm) {
-	.mdc-top-app-bar {
-		display: flex;
-	}
+  .mdc-top-app-bar {
+    display: flex;
+  }
 }
 
 // Typography:
 h1 {
-	@include mdc-typography(headline1);
+  @include mdc-typography(headline1);
 }
 
 h2 {
-	@include mdc-typography(headline2);
+  @include mdc-typography(headline2);
 }
 
 h3 {
-	@include mdc-typography(headline3);
+  @include mdc-typography(headline3);
 }
 
 h4 {
-	@include mdc-typography(headline4);
+  @include mdc-typography(headline4);
 }
 
 h5 {
-	@include mdc-typography(headline5);
+  @include mdc-typography(headline5);
 }
 
 h6 {
-	@include mdc-typography(headline6);
+  @include mdc-typography(headline6);
 }
 
 a {
-	color: $mdc-theme-primary-dark;
+  color: $mdc-theme-primary-dark;
 }
 
 .headshot-image {
-	height: 16rem;
-	width: 16rem;
-	object-fit: cover;
-	object-postion: 50% 50%;
-	border-radius: 100%;
+  height: 16rem;
+  width: 16rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 100%;
 }
 
 // Position drawer so that it's full height, doesn't scroll with everything
 // else, etc. i.e. it should be "fixed". Note that Material Design guidelines
 // say that standard drawers are *always* 256px wide.
 @media (min-width: $breakpoint-sm) {
-	.cv-drawer:not(.mdc-drawer--modal) {
-		position: fixed;
-		top: 0;
-		bottom: 0;
+  .cv-drawer:not(.mdc-drawer--modal) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
 
-		& ~ .cv-app-content {
-			margin-left: 256px;
-		}
-	}
+    & ~ .cv-app-content {
+      margin-left: 256px;
+    }
+  }
 }
 
 // Drawer header:
 .mdc-drawer__header {
-	.headshot-image {
-		display: block;
-		height: 9rem;
-		width: 9rem;
-		margin: 30px auto;
+  .headshot-image {
+    display: block;
+    height: 9rem;
+    width: 9rem;
+    margin: 30px auto;
 
-		@media (max-width: $breakpoint-sm) {
-			height: 4.5rem;
-			width: 4.5rem;
-			margin: 20px auto;
-		}
-	}
+    @media (max-width: $breakpoint-sm) {
+      height: 4.5rem;
+      width: 4.5rem;
+      margin: 20px auto;
+    }
+  }
 
-	h1, h2 {
-		text-align: center;
-	}
+  h1, h2 {
+    text-align: center;
+  }
 
-	h1 {
-		@include mdc-typography(headline5);
-	}
+  h1 {
+    @include mdc-typography(headline5);
+  }
 
-	h2 {
-		@include mdc-typography(subtitle2);
-	}
+  h2 {
+    @include mdc-typography(subtitle2);
+  }
 
-	p {
-		@include mdc-typography(body2);
+  p {
+    @include mdc-typography(body2);
 
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
 
-		span {
-			margin-left: 4px;
-		}
-	}
+    span {
+      margin-left: 4px;
+    }
+  }
 
-	.social-links {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
