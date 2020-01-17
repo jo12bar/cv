@@ -6,3 +6,7 @@
   link: /experience.html
   icon: work
   heroImg: experience
+- name: Skills
+  link: /skills.html
+  icon: build
+  heroImf: skills
