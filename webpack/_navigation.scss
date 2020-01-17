@@ -1,0 +1,79 @@
+// BREAKPOINT min-width: $breakpoint-sm
+.mdc-top-app-bar {
+  display: none;
+}
+
+// BREAKPOINT max-width: $breakpoint-sm
+@media (max-width: $breakpoint-sm) {
+  .mdc-top-app-bar {
+    display: flex;
+  }
+}
+
+.headshot-image {
+  height: 16rem;
+  width: 16rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 100%;
+}
+
+// Position drawer so that it's full height, doesn't scroll with everything
+// else, etc. i.e. it should be "fixed". Note that Material Design guidelines
+// say that standard drawers are *always* 256px wide.
+@media (min-width: $breakpoint-sm) {
+  .cv-drawer:not(.mdc-drawer--modal) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    & ~ .cv-app-content {
+      margin-left: 256px;
+    }
+  }
+}
+
+// Drawer header:
+.mdc-drawer__header {
+  .headshot-image {
+    display: block;
+    height: 9rem;
+    width: 9rem;
+    margin: 30px auto;
+
+    @media (max-width: $breakpoint-sm) {
+      height: 4.5rem;
+      width: 4.5rem;
+      margin: 20px auto;
+    }
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  h1 {
+    @include mdc-typography(headline5);
+  }
+
+  h2 {
+    @include mdc-typography(subtitle2);
+  }
+
+  p {
+    @include mdc-typography(body2);
+
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
