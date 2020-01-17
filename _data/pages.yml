@@ -9,4 +9,8 @@
 - name: Skills
   link: /skills.html
   icon: build
-  heroImf: skills
+  heroImg: skills
+- name: Hobbies, Interests, and Extracurricular Involvement
+  link: /hobbies.html
+  icon: party_mode
+  heroImg: hobbies
