@@ -10,6 +10,10 @@
   link: /skills.html
   icon: build
   heroImg: skills
+- name: Education
+  link: /education.html
+  icon: school
+  heroImg: education
 - name: Hobbies, Interests, and Extracurricular Involvement
   link: /hobbies.html
   icon: party_mode
