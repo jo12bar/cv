@@ -18,3 +18,7 @@
   link: /hobbies.html
   icon: party_mode
   heroImg: hobbies
+- name: Awards, Scholarships
+  link: /awards.html
+  icon: flag
+  heroImg: awards
