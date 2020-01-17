@@ -46,10 +46,10 @@ $cv-hero-height-sm: 30vh;
   }
 
   &--spacer {
-    height: $cv-hero-height;
+    height: calc(#{$cv-hero-height} + 3rem);
 
     @media (max-width: $breakpoint-sm) {
-      height: $cv-hero-height-sm;
+      height: calc(#{$cv-hero-height-sm} + 3rem);
     }
   }
 }
