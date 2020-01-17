@@ -38,6 +38,11 @@ $cv-hero-height-sm: 30vh;
   &__inner {
     position: absolute;
     bottom: 0;
+
+    @media (max-width: $breakpoint-sm) {
+      position: static;
+      bottom: auto;
+    }
   }
 
   &--spacer {
