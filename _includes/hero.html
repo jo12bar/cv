@@ -1,0 +1,23 @@
+<div
+  class="cv-hero {%- for item in site.data.pages -%}
+      {%- if item.link == page.url and item.heroImg -%}
+        {{ " " }}cv-hero--bg-img-{{ item.heroImg }}
+      {%- endif -%}
+    {%- endfor -%}
+  "
+>
+  <div class="cv-hero__inner">
+    <h2>
+      {% if include.showHelloIAm %}
+        Hello! I am
+      {% else %}
+        <br>
+      {% endif %}
+    </h2>
+
+    <h1>{{ include.header }}</h1>
+
+  </div>
+</div>
+
+<div class="cv-hero--spacer"></div>

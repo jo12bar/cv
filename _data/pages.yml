@@ -1,0 +1,8 @@
+- name: About
+  link: /
+  icon: person
+  heroImg: about
+- name: Experience
+  link: experience.html
+  icon: work
+  heroImg: experience

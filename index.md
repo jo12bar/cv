@@ -1,11 +1,9 @@
 ---
 layout: default
 title: "Johann M. Barnard - CV"
+header: "Johann M. Barnard"
+showHelloIAm: true
 ---
-
-### Hello! I am
-
-# Johann M. Barnard
 
 This will be a CV soon! Just let me get a few things set up 😁
 

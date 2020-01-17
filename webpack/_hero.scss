@@ -1,0 +1,50 @@
+$cv-hero-height: 50vh;
+$cv-hero-height-sm: 30vh;
+
+.cv-hero {
+  position: absolute;
+  padding-top: 20px + 56px; // To account for nav bar, drawer inset, etc.
+  padding-left: 50px;
+  padding-right: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: $cv-hero-height;
+
+  background-color: $mdc-theme-primary;
+  color: $mdc-theme-on-primary;
+
+  @media (max-width: $breakpoint-sm) {
+    min-height: $cv-hero-height-sm;
+  }
+
+  h1 {
+    @include mdc-typography(headline1);
+
+    @media (max-width: $breakpoint-sm) {
+      @include mdc-typography(headline2);
+    }
+  }
+
+  h2 {
+    @include mdc-typography(headline4);
+
+    @media (max-width: $breakpoint-sm) {
+      @include mdc-typography(headline6);
+      line-height: 1.25rem;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &--spacer {
+    height: $cv-hero-height;
+
+    @media (max-width: $breakpoint-sm) {
+      height: $cv-hero-height-sm;
+    }
+  }
+}

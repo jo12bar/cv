@@ -1,3 +1,17 @@
 ---
 ---
 @import "main";
+
+{% for item in site.data.pages %}
+  .cv-hero--bg-img-{{ item.heroImg }} {
+    background: url("{{ item.heroImg | prepend: "/assets/images/hero/" | append: ".jpg" | relative_url }}");
+  }
+{% endfor %}
+
+{% for item in site.data.pages %}
+  .cv-hero--bg-img-{{ item.heroImg }},
+{% endfor %}
+{
+  background-position: 50% 50%;
+  background-size: cover;
+}
