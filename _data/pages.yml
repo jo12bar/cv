@@ -3,6 +3,6 @@
   icon: person
   heroImg: about
 - name: Experience
-  link: experience.html
+  link: /experience.html
   icon: work
   heroImg: experience

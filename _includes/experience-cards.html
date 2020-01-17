@@ -1,0 +1,30 @@
+{% assign experience = "NOPE" %}
+
+{% if include.type == "work" %}
+  {% assign experience = site.data.experience.work %}
+{% elsif include.type == "volunteer" %}
+  {% assign experience = site.data.experience.volunteer %}
+{% endif %}
+
+{% for item in experience %}
+  <div class="mdc-card cv-experience-card">
+    <div class="cv-experience-card__header">
+      <div class="cv-experience-card__header--inner">
+        <h4 class="cv-experience-card__where">{{ item.where }}</h4>
+        <h6 class="cv-experience-card__position">{{ item.position }}</h6>
+        <p class="cv-experience-card__location-when-wrapper">
+          <span class="cv-experience-card__location">{{ item.location }}</span>
+          <span class="cv-experience-card__when">{{ item.when }}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="cv-experience-card__content">
+      <ul>
+        {% for point in item.what %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endfor %}
