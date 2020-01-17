@@ -22,3 +22,7 @@
   link: /awards.html
   icon: flag
   heroImg: awards
+- name: Additional Information
+  link: /additional-info.html
+  icon: sentiment_satisfied_alt
+  heroImg: additional-info
