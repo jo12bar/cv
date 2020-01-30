@@ -21,6 +21,7 @@ echo "☕ Building javascript and scss files with webpack into assets/generated.
 npm run build:prod
 
 echo "🎩 Building with Jekyll..."
+rm assets/.gitignore # to make sure that the generated assets get included
 JEKYLL_ENV=production bundle exec jekyll build
 echo "Jekyll build done"
 
