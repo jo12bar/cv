@@ -1,0 +1,22 @@
+name: deploy
+
+# Only trigger when pushing to master:
+on:
+  push:
+    branches:
+      - master
+
+# Deploy jobs
+jobs:
+  build:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      # Make sure to check out the repo
+      - uses: actions/checkout@v2
+      # Our custom deploy building action
+      - uses: ./.github/actions/build-dist-site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_REPO_NWO: ${{ github.repository }}
