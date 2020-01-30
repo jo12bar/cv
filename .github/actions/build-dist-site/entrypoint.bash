@@ -14,6 +14,12 @@ git remote -v
 echo "💎 Installing ruby dependencies..."
 bundle install
 
+echo "📦 Installing npm dependencies..."
+npm ci
+
+echo "☕ Building javascript and scss files with webpack into assets/generated..."
+npm run build:prod
+
 echo "🎩 Building with Jekyll..."
 JEKYLL_ENV=production bundle exec jekyll build
 echo "Jekyll build done"

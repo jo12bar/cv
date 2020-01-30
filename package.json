@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "NODE_ENV=production webpack",
     "start-dev-server": "./start-dev-server.sh"
   },
   "repository": {
@@ -26,19 +27,12 @@
     "extract-loader": "^3.1.0",
     "fibers": "^4.0.2",
     "file-loader": "^5.0.2",
-    "husky": "4.0.7",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
     "sass": "^1.24.4",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "touch .commit",
-      "post-commit": "if [ -e .commit ]; then rm .commit; NODE_ENV=production webpack; git add assets/generated; git commit --amend -C HEAD --no-verify; fi"
-    }
   },
   "dependencies": {
     "@material/button": "^4.0.0",

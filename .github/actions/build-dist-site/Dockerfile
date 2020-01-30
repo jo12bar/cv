@@ -19,7 +19,9 @@ RUN apt-get update && \
     shellcheck \
     git-all \
     && gem install bundler \
-    && bundle config --global silence_root_warning 1
+    && bundle config --global silence_root_warning 1 \
+    && bash -c 'curl -sL https://deb.nodesource.com/setup_13.x | bash -' \
+    && apt-get install -y nodejs
 
 COPY entrypoint.bash /
 
