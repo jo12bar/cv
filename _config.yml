@@ -1,5 +1,4 @@
-title: "Johann M. Barnard - CV"
-baseurl: "/cv"
+title: 'Johann M. Barnard - CV'
 
 sass:
   sass_dir: _sass
@@ -7,7 +6,7 @@ sass:
 
 compress-site: yes
 
-encoding: "utf-8"
+encoding: 'utf-8'
 compress_html:
   clippings: all
   ignore:
