@@ -16,7 +16,9 @@ for (const button of document.querySelectorAll('.test-button')) {
 const navDrawer = {
   topAppBarElement: document.querySelector('.mdc-top-app-bar'),
   listEl: document.querySelector('.mdc-drawer .mdc-list'),
-  listElClickDeregister: () => { /* no-op */ },
+  listElClickDeregister: () => {
+    /* no-op */
+  },
   drawerElement: document.querySelector('.mdc-drawer'),
   mainContentElement: document.querySelector('.main-content'),
 };
@@ -34,24 +36,29 @@ const initModalDrawer = () => {
     drawer.open = !drawer.open;
   });
 
-  const handleDrawerElementClick = (event) => { drawer.open = false };
+  const handleDrawerElementClick = (event) => {
+    drawer.open = false;
+  };
   navDrawer.listEl.addEventListener('click', handleDrawerElementClick);
-  navDrawer.listElClickDeregister = () => navDrawer.listEl.removeEventListener('click', handleDrawerElementClick);
+  navDrawer.listElClickDeregister = () =>
+    navDrawer.listEl.removeEventListener('click', handleDrawerElementClick);
 
   return drawer;
-}
+};
 
 const initPermanentDrawer = () => {
   navDrawer.drawerElement.classList.remove('mdc-drawer--modal');
 
   navDrawer.listElClickDeregister();
-  navDrawer.listElClickDeregister = () => { /* no-op */ };
+  navDrawer.listElClickDeregister = () => {
+    /* no-op */
+  };
 
   const list = new MDCList(navDrawer.listEl);
   list.wrapFocus = true;
 
   return list;
-}
+};
 
 let drawer = window.matchMedia('(max-width: 900px)').matches
   ? initModalDrawer()
@@ -60,17 +67,20 @@ let drawer = window.matchMedia('(max-width: 900px)').matches
 // Toggle between permanent and modal drawer at 900px
 
 const resizeHandler = () => {
-  if (window.matchMedia('(max-width: 900px)').matches && drawer instanceof MDCList) {
+  if (
+    window.matchMedia('(max-width: 900px)').matches &&
+    drawer instanceof MDCList
+  ) {
     drawer.destroy();
     drawer = initModalDrawer();
-  }
-  else if (window.matchMedia('(min-width: 900px)').matches && drawer instanceof MDCDrawer) {
+  } else if (
+    window.matchMedia('(min-width: 900px)').matches &&
+    drawer instanceof MDCDrawer
+  ) {
     drawer.destroy();
     drawer = initPermanentDrawer();
   }
-}
+};
 
 const ro = new ResizeObserver(resizeHandler);
 ro.observe(document.body);
-
-console.log('Hello, world!');
