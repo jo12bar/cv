@@ -25,6 +25,9 @@ rm assets/.gitignore # to make sure that the generated assets get included
 JEKYLL_ENV=production bundle exec jekyll build
 echo "Jekyll build done"
 
+echo "📋 Copying CNAME to _site/CNAME..."
+cp CNAME _site/CNAME
+
 # Publish site from generated _site folder
 cd _site
 
