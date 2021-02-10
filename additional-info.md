@@ -5,7 +5,7 @@ header: "Additional Information"
 showHelloIAm: false
 ---
 
-- **BC "N" Class 7 Drivers License**
+- **BC Class 5 Drivers License**
   - Good-condition car, clean driver's abstract, insured
 - **Languages**
   - English (Fluent)
@@ -14,4 +14,4 @@ showHelloIAm: false
 
 ## References
 
-**_Available upon request_**
+**_[Available upon request](mailto:johann.b@telus.net?subject=Please%20send%20us%20your%20job%20references)_**
