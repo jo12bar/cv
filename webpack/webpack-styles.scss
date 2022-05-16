@@ -1,25 +1,32 @@
-@import "theme"; // This should be imported first!
+@use "theme"; // This should be imported first!
 
-@import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list";
-@import "@material/button/mdc-button";
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/typography/mdc-typography";
-@import "@material/icon-button/mdc-icon-button";
-@import "@material/elevation/mdc-elevation";
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/card/mdc-card";
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/button/styles" as button-styles;
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/typography/mdc-typography";
+@use "@material/icon-button/styles" as icon-button-styles;
+@use "@material/elevation/mdc-elevation";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/card";
+@use "@material/chips/styles" as mdc-chip-styles;
 
-@import "navigation";
-@import "typography";
-@import "hero";
-@import "experience";
+@use "navigation";
+@use "typography";
+@use "hero";
+@use "experience";
+
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.deprecated-core-styles;
+@include card.core-styles;
 
 body {
   background: #f5f5f5;
-  display: flex;     // Removes top gap between modal and viewport
+  display: flex; // Removes top gap between modal and viewport
   min-height: 100vh; // Ensures that permanent drawer extends to bottom of viewport
-  margin: 0;         // Removes top gap between app bar and viewport
+  margin: 0; // Removes top gap between app bar and viewport
 }
 
 .main-content {

@@ -4,14 +4,15 @@
   <div class="mdc-list-divider"></div>
 
   <div class="mdc-drawer__content">
-    <nav class="mdc-list">
+    <nav class="mdc-deprecated-list">
       {% for item in site.data.pages %}
         <a
           href="{{ item.link | relative_url }}"
-          class="nav-link mdc-list-item{% if page.url == item.link %} current-page mdc-list-item--activated{% endif %}"
+          class="nav-link mdc-deprecated-list-item{% if page.url == item.link %} current-page mdc-deprecated-list-item--activated{% endif %}"
           {% if page.url == item.link %}aria-current="page"{% endif %}>
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{{ item.icon }}</i>
-          <span class="mdc-list-item__text">{{ item.name }}</span>
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">{{ item.icon }}</i>
+          <span class="mdc-deprecated-list-item__text">{{ item.name }}</span>
         </a>
       {% endfor %}
     </nav>

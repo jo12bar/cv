@@ -1,29 +1,31 @@
+@use "./theme" as theme;
+@use "@material/typography" as mdc-typography;
 
 // Typography:
 h1 {
-  @include mdc-typography(headline1);
+  @include mdc-typography.typography(headline1);
 }
 
 h2 {
-  @include mdc-typography(headline2);
+  @include mdc-typography.typography(headline2);
 }
 
 h3 {
-  @include mdc-typography(headline3);
+  @include mdc-typography.typography(headline3);
 }
 
 h4 {
-  @include mdc-typography(headline4);
+  @include mdc-typography.typography(headline4);
 }
 
 h5 {
-  @include mdc-typography(headline5);
+  @include mdc-typography.typography(headline5);
 }
 
 h6 {
-  @include mdc-typography(headline6);
+  @include mdc-typography.typography(headline6);
 }
 
 a {
-  color: $mdc-theme-primary-dark;
+  color: theme.$mdc-theme-primary-dark;
 }

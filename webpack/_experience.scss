@@ -1,37 +1,76 @@
+@use "./theme" as theme;
+
+@use "@material/card" as mdc-card;
+@use "@material/chips" as mdc-chip;
+@use "@material/typography" as mdc-typography;
+
 $cv-experience-card-padding: 16px; // per material design spec
 
 .cv-experience-card {
-  position: relative;
-
   & + .cv-experience-card {
     margin-top: 24px;
   }
 
+  &__header {
+    @include mdc-card.fill-color(primary);
+    color: theme.$mdc-theme-on-primary;
+
+    > * {
+      padding: $cv-experience-card-padding;
+    }
+
+    > :not(:last-child) {
+      padding-bottom: 0;
+    }
+
+    > :last-child {
+      margin-top: $cv-experience-card-padding;
+    }
+  }
+
   &__where {
-    @include mdc-typography(headline4);
-    margin: 0;
+    &__title {
+      @include mdc-typography.typography(headline4);
+      margin: 0;
+    }
   }
 
   &__position {
-    @include mdc-typography(headline6);
-    margin: 0;
+    &__title {
+      @include mdc-typography.typography(headline6);
+      margin: 0;
+    }
   }
 
   &__location-when-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: $cv-experience-card-padding;
-    margin: 0;
-    min-height: 32px + 2 * $cv-experience-card-padding;
+    // min-height: 32px + 2 * $cv-experience-card-padding;
 
-    @include mdc-card-fill-color(secondary);
-    color: $mdc-theme-on-secondary;
+    @include mdc-card.fill-color(secondary);
+
+    color: theme.$mdc-theme-on-secondary;
+
+    .mdc-evolution-chip {
+      @include mdc-chip.outline-width(1px);
+      @include mdc-chip.outline-color(theme.$mdc-theme-on-secondary);
+      @include mdc-chip.container-color(theme.$mdc-theme-secondary-light);
+      @include mdc-chip.icon-color(theme.$mdc-theme-on-secondary);
+
+      color: theme.$mdc-theme-on-secondary;
+    }
+
+    .mdc-evolution-chip--with-primary-icon .mdc-evolution-chip__graphic {
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    .mdc-evolution-chip__text-label {
+      user-select: initial;
+    }
   }
 
-  &__location, &__when {
-    @include mdc-typography(headline6);
+  &__location,
+  &__when {
+    @include mdc-typography.typography(headline6);
     font-weight: normal;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     padding: $cv-experience-card-padding;
@@ -40,17 +79,5 @@ $cv-experience-card-padding: 16px; // per material design spec
 
   &__location {
     padding-left: 0;
-  }
-
-  &__header {
-    @include mdc-card-fill-color(primary);
-    color: $mdc-theme-on-primary;
-
-
-    &--inner {
-      position: relative;
-      padding: $cv-experience-card-padding;
-      padding-bottom: 32px + 3 * $cv-experience-card-padding;
-    }
   }
 }

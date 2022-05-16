@@ -1,3 +1,7 @@
+@use "./theme" as theme;
+
+@use "@material/typography" as mdc-typography;
+
 $cv-hero-height: 50vh;
 $cv-hero-height-sm: 30vh;
 
@@ -11,26 +15,26 @@ $cv-hero-height-sm: 30vh;
   width: 100%;
   min-height: $cv-hero-height;
 
-  background-color: $mdc-theme-primary;
-  color: $mdc-theme-on-primary;
+  background-color: theme.$mdc-theme-primary;
+  color: theme.$mdc-theme-on-primary;
 
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: theme.$breakpoint-sm) {
     min-height: $cv-hero-height-sm;
   }
 
   h1 {
-    @include mdc-typography(headline1);
+    @include mdc-typography.typography(headline1);
 
-    @media (max-width: $breakpoint-sm) {
-      @include mdc-typography(headline2);
+    @media (max-width: theme.$breakpoint-sm) {
+      @include mdc-typography.typography(headline2);
     }
   }
 
   h2 {
-    @include mdc-typography(headline4);
+    @include mdc-typography.typography(headline4);
 
-    @media (max-width: $breakpoint-sm) {
-      @include mdc-typography(headline6);
+    @media (max-width: theme.$breakpoint-sm) {
+      @include mdc-typography.typography(headline6);
       line-height: 1.25rem;
     }
   }
@@ -39,17 +43,17 @@ $cv-hero-height-sm: 30vh;
     position: absolute;
     bottom: 0;
 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: theme.$breakpoint-sm) {
       position: static;
       bottom: auto;
     }
   }
 
   &--spacer {
-    height: calc(#{$cv-hero-height} + 3rem);
+    height: calc(#{$cv-hero-height} - 20px - 56px);
 
-    @media (max-width: $breakpoint-sm) {
-      height: calc(#{$cv-hero-height-sm} + 3rem);
+    @media (max-width: theme.$breakpoint-sm) {
+      height: calc(#{$cv-hero-height-sm} - 20px - 56px);
     }
   }
 }

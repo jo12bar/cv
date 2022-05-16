@@ -1,30 +1,88 @@
-{% assign experience = "NOPE" %}
-
-{% if include.type == "work" %}
-  {% assign experience = site.data.experience.work %}
-{% elsif include.type == "volunteer" %}
-  {% assign experience = site.data.experience.volunteer %}
-{% endif %}
-
-{% for item in experience %}
-  <div class="mdc-card cv-experience-card">
-    <div class="cv-experience-card__header">
-      <div class="cv-experience-card__header--inner">
-        <h4 class="cv-experience-card__where">{{ item.where }}</h4>
-        <h6 class="cv-experience-card__position">{{ item.position }}</h6>
-        <p class="cv-experience-card__location-when-wrapper">
-          <span class="cv-experience-card__location">{{ item.location }}</span>
-          <span class="cv-experience-card__when">{{ item.when }}</span>
-        </p>
-      </div>
+{% assign experience = "NOPE" %} {% if include.type == "work" %} {% assign
+experience = site.data.experience.work %} {% elsif include.type == "volunteer"
+%} {% assign experience = site.data.experience.volunteer %} {% endif %} {% for
+item in experience %}
+<div class="mdc-card cv-experience-card">
+  <div class="cv-experience-card__header">
+    <div class="cv-experience-card__where">
+      <h4 class="cv-experience-card__where__title">{{ item.where }}</h4>
     </div>
-
-    <div class="cv-experience-card__content">
-      <ul>
-        {% for point in item.what %}
-          <li>{{ point }}</li>
-        {% endfor %}
-      </ul>
+    <div class="cv-experience-card__position">
+      <h6 class="cv-experience-card__position__title">{{ item.position }}</h6>
     </div>
+    <div
+      class="cv-experience-card__location-when-wrapper mdc-evolution-chip-set"
+      role="grid"
+    >
+      <span class="mdc-evolution-chip-set__chips" role="presentation">
+        <!-- location -->
+        <span
+          class="mdc-evolution-chip mdc-evolution-chip--disabled mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--with-primary-icon"
+          role="row"
+        >
+          <span
+            class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary"
+            role="gridcell"
+          >
+            <span
+              class="mdc-evolution-chip__action mdc-evolution-chip__action--primary mdc-evolution-chip__action--presentational"
+            >
+              <span
+                class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"
+              ></span>
+              <span class="mdc-evolution-chip__graphic">
+                <span
+                  class="mdc-evolution-chip__icon mdc-evolution-chip__icon--primary material-icons"
+                  >location_city</span
+                >
+              </span>
+              <span class="mdc-evolution-chip__text-label"
+                >{{ item.location }}</span
+              >
+            </span>
+          </span>
+        </span>
+        <!-- time -->
+        <span
+          class="mdc-evolution-chip mdc-evolution-chip--disabled mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--with-primary-icon"
+          role="row"
+        >
+          <span
+            class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary"
+            role="gridcell"
+          >
+            <span
+              class="mdc-evolution-chip__action mdc-evolution-chip__action--primary mdc-evolution-chip__action--presentational"
+            >
+              <span
+                class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"
+              ></span>
+              <span class="mdc-evolution-chip__graphic">
+                <span
+                  class="mdc-evolution-chip__icon mdc-evolution-chip__icon--primary material-icons"
+                  >calendar_month</span
+                >
+              </span>
+              <span class="mdc-evolution-chip__text-label"
+                >{{ item.when }}</span
+              >
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <!--<div class="cv-experience-card__location-when-wrapper">
+      <span class="cv-experience-card__location">{{ item.location }}</span>
+      <span class="cv-experience-card__when">{{ item.when }}</span>
+    </div>-->
   </div>
+
+  <div class="cv-experience-card__content">
+    <ul>
+      {% for point in item.what %}
+      <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 {% endfor %}
