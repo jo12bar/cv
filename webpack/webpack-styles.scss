@@ -1,26 +1,26 @@
-@use "theme"; // This should be imported first!
+@use "./theme" as theme; // This should be imported first!
 
-@use "@material/drawer";
-@use "@material/list";
-@use "@material/button/styles" as button-styles;
-@use "@material/top-app-bar/mdc-top-app-bar";
-@use "@material/typography/mdc-typography";
-@use "@material/icon-button/styles" as icon-button-styles;
-@use "@material/elevation/mdc-elevation";
-@use "@material/layout-grid/mdc-layout-grid";
-@use "@material/card";
+@use "@material/drawer" as mdc-drawer;
+@use "@material/list" as mdc-list;
+@use "@material/button/styles" as mdc-button-styles;
+@use "@material/top-app-bar/mdc-top-app-bar" as mdc-top-app-bar;
+@use "@material/typography/mdc-typography" as mdc-typography;
+@use "@material/icon-button/styles" as mdc-icon-button-styles;
+@use "@material/elevation/mdc-elevation" as mdc-elevation;
+@use "@material/layout-grid/mdc-layout-grid" as mdc-layout-grid;
+@use "@material/card" as mdc-card;
 @use "@material/chips/styles" as mdc-chip-styles;
 
-@use "navigation";
-@use "typography";
-@use "hero";
-@use "experience";
+@use "./navigation" as navigation;
+@use "./typography" as typography;
+@use "./hero" as hero;
+@use "./experience" as experience;
 
-@include drawer.core-styles;
-@include drawer.dismissible-core-styles;
-@include drawer.modal-core-styles;
-@include list.deprecated-core-styles;
-@include card.core-styles;
+@include mdc-drawer.core-styles;
+@include mdc-drawer.dismissible-core-styles;
+@include mdc-drawer.modal-core-styles;
+@include mdc-list.deprecated-core-styles;
+@include mdc-card.core-styles;
 
 body {
   background: #f5f5f5;
@@ -30,7 +30,12 @@ body {
 }
 
 .main-content {
-  margin: 20px 50px;
+  margin: theme.$main-content-margin-vert theme.$main-content-margin-horiz;
+
+  @media screen and (max-width: theme.$breakpoint-sm) {
+    margin: theme.$main-content-margin-vert--sm
+      theme.$main-content-margin-horiz--sm;
+  }
 }
 
 .cv-app-content {

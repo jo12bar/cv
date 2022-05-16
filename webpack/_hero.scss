@@ -1,9 +1,10 @@
 @use "./theme" as theme;
 
 @use "@material/typography" as mdc-typography;
+@use "@material/top-app-bar/variables" as mdc-top-app-bar-vars;
 
 $cv-hero-height: 50vh;
-$cv-hero-height-sm: 30vh;
+$cv-hero-height--sm: 30vh;
 
 .cv-hero {
   position: absolute;
@@ -19,7 +20,21 @@ $cv-hero-height-sm: 30vh;
   color: theme.$mdc-theme-on-primary;
 
   @media (max-width: theme.$breakpoint-sm) {
-    min-height: $cv-hero-height-sm;
+    position: static;
+
+    min-height: calc(
+      $cv-hero-height--sm + theme.$main-content-margin-vert--sm +
+        mdc-top-app-bar-vars.$mobile-row-height
+    );
+
+    width: calc(100% + #{2 * theme.$main-content-margin-horiz--sm});
+
+    margin-top: calc(
+      #{-1 * theme.$main-content-margin-vert--sm} - #{mdc-top-app-bar-vars.$mobile-row-height}
+    );
+
+    margin-left: #{-1 * theme.$main-content-margin-horiz--sm};
+    margin-right: #{-1 * theme.$main-content-margin-horiz--sm};
   }
 
   h1 {
@@ -53,7 +68,7 @@ $cv-hero-height-sm: 30vh;
     height: calc(#{$cv-hero-height} - 20px - 56px);
 
     @media (max-width: theme.$breakpoint-sm) {
-      height: calc(#{$cv-hero-height-sm} - 20px - 56px);
+      display: none;
     }
   }
 }

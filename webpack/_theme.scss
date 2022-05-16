@@ -44,6 +44,13 @@ $mdc-theme-on-surface: #000000;
 /* Breakpoints */
 $breakpoint-sm: 900px;
 
+/* Main content margins */
+$main-content-margin-horiz: 3rem;
+$main-content-margin-vert: 1.25rem;
+
+$main-content-margin-horiz--sm: 1.5rem;
+$main-content-margin-vert--sm: $main-content-margin-vert;
+
 :root {
   /* Typography */
   --mdc-typography-font-family: #{$mdc-typography-font-family};
@@ -72,4 +79,11 @@ $breakpoint-sm: 900px;
 
   /* Breakpoints */
   --breakpoint-sm: #{$breakpoint-sm};
+
+  /* Main content margins */
+  --main-content-margin-horiz: #{$main-content-margin-horiz};
+  --main-content-margin-vert: #{$main-content-margin-vert};
+
+  --main-content-margin-horiz--sm: #{$main-content-margin-horiz--sm};
+  --main-content-margin-vert--sm: #{$main-content-margin-vert--sm};
 }
