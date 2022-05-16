@@ -1,0 +1,23 @@
+{%- assign _social_icon_link_button__label = "Go to social media page" -%} {%-
+if include.label -%} {%- assign _social_icon_link_button__label = include.label
+-%} {%- endif -%} {%- assign _social_icon_link_button__svg_viewbox = "0 0 24 24"
+-%} {%- if include.svg_viewbox -%} {%- assign
+_social_icon_link_button__svg_viewbox = include.svg_viewbox -%} {%- endif -%}
+
+<a
+  class="mdc-icon-button"
+  aria-label="{{ _social_icon_link_button__label }}"
+  aria-hidden="true"
+  href="{{ include.href }}"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg
+    class="mdc-icon-button__icon"
+    role="img"
+    viewBox="{{ _social_icon_link_button__svg_viewbox }}"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {{ include.svg_content }}
+  </svg>
+</a>
