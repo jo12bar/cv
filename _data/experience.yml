@@ -1,70 +1,79 @@
 work:
-  - where: 'Bowhead Design Corp.'
-    when: 'Aug&#x200a;&mdash;&#x200a;Dec 2020'
-    position: 'Cooperative Education Student'
-    location: 'Calgary, AB'
+  - where: "TechBrew Robotics Inc."
+    when: "May&#x200a;&mdash;&#x200a;Dec 2021"
+    position: "Mechatronics Engineering Co-op Student"
+    location: "Salmon Arm, BC"
     what:
-      - 'Built adaptive, electric mountain bikes for those with disabilities, daily'
-      - 'Built working prototype of a self-levelling mobility scooter'
-      - 'Faced metal tubing on lathe, operated drill press and bandsaw, and epoxyed parts, among other operations'
-      - 'Redesigned several 3D-printed parts to reduce cost, print time, and support material'
-      - 'Improved bike assembly processes and documentation'
-      - 'Overhauled Microsoft Access-based project tracker; wrote complex Google Sheets macros'
-  - where: 'Safeway'
-    when: 'May&#x200a;&mdash;&#x200a;Jul 2020'
-    position: 'Cashier'
-    location: 'Vernon, BC'
+      - "Designed and implemented software systems for fully autonomous mushroom-harvesting robots across Windows platforms and PLCs"
+      - "Assisted with mechanical design and manufacturing for conveyor systems"
+      - "Developed advanced, automatic performance report generation software for interactive analysis of picking performance, trimming performance, and overall yield"
+      - "Set up small, high-availability PostgreSQL and Grafana server clusters for real-time data visibility"
+  - where: "Bowhead Design Corp."
+    when: "Aug&#x200a;&mdash;&#x200a;Dec 2020"
+    position: "Cooperative Education Student"
+    location: "Calgary, AB"
     what:
-      - 'Temporary summer position to help my local Safeway during the COVID-19 pandemic'
-      - 'Cashiered in express and regular checkout lanes'
-      - 'Cleaned high-touch surfaces, such as ledges, handles, carts, or baskets.'
-      - 'Controlled number of people in store at a time'
+      - "Built adaptive, electric mountain bikes for those with disabilities, daily"
+      - "Built working prototype of a self-levelling mobility scooter"
+      - "Faced metal tubing on lathe, operated drill press and bandsaw, and epoxyed parts, among other operations"
+      - "Redesigned several 3D-printed parts to reduce cost, print time, and support material"
+      - "Improved bike assembly processes and documentation"
+      - "Overhauled Microsoft Access-based project tracker; wrote complex Google Sheets macros"
   - where: "Wref's Consulting Inc."
-    when: 'May&#x200a;&mdash;&#x200a;Aug 2019'
-    position: 'Engineering Student'
-    location: 'Vernon, BC'
+    when: "May&#x200a;&mdash;&#x200a;Aug 2019"
+    position: "Engineering Student"
+    location: "Vernon, BC"
     what:
-      - 'Entered, organized, manipulated, and graphed data in MS Excel'
-      - 'Read hydro generator drawings from many companies and obtained information on spare parts from them'
-      - 'Managed, wrote, and proof-read technical reports and internal company process documentation'
-      - 'Performed some IT work, including setting up a Synology NAS and fixing printers'
-  - where: 'Vernon Family Doctor&rsquo;s Clinic'
-    when: 'Jun&#x200a;&mdash;&#x200a;Aug 2014'
-    position: 'Archivist'
-    location: 'Vernon, BC'
+      - "Entered, organized, manipulated, and graphed data in MS Excel"
+      - "Read hydro generator drawings from many companies and obtained information on spare parts from them"
+      - "Managed, wrote, and proof-read technical reports and internal company process documentation"
+      - "Performed some IT work, including setting up a Synology NAS and fixing printers"
+  - where: "Safeway"
+    when: "May&#x200a;&mdash;&#x200a;Jul 2020"
+    position: "Cashier"
+    location: "Vernon, BC"
     what:
-      - 'Archived, scanned, sorted and extracted patient information from damaged documents'
-      - 'Maintained a backup system for medical records, and resolved issues as they arose'
+      - "Temporary summer position to help my local Safeway during the COVID-19 pandemic"
+      - "Cashiered in express and regular checkout lanes"
+      - "Cleaned high-touch surfaces, such as ledges, handles, carts, or baskets."
+      - "Controlled number of people in store at a time"
+  - where: "Vernon Family Doctor&rsquo;s Clinic"
+    when: "Jun&#x200a;&mdash;&#x200a;Aug 2014"
+    position: "Archivist"
+    location: "Vernon, BC"
+    what:
+      - "Archived, scanned, sorted and extracted patient information from damaged documents"
+      - "Maintained a backup system for medical records, and resolved issues as they arose"
 volunteer:
-  - where: 'Okanagan Science Centre'
-    when: 'Jun&#x200a;&mdash;&#x200a;Aug 2016, 2018'
-    position: 'Summer Camp Volunteer'
-    location: 'Vernon, BC'
+  - where: "Okanagan Science Centre"
+    when: "Jun&#x200a;&mdash;&#x200a;Aug 2016, 2018"
+    position: "Summer Camp Volunteer"
+    location: "Vernon, BC"
     what:
-      - 'Assisted with labs, demonstrations, and supervision of children in an attentive and precise manner'
-      - 'Taught children about Arduino microcontrollers and basic circuitry'
-  - where: 'Vernon Alliance Church'
-    when: 'Sep 2015&#x200a;&mdash;&#x200a;May 2018'
-    position: 'Youth Group Leader'
-    location: 'Vernon, BC'
+      - "Assisted with labs, demonstrations, and supervision of children in an attentive and precise manner"
+      - "Taught children about Arduino microcontrollers and basic circuitry"
+  - where: "Vernon Alliance Church"
+    when: "Sep 2015&#x200a;&mdash;&#x200a;May 2018"
+    position: "Youth Group Leader"
+    location: "Vernon, BC"
     what:
-      - 'Led, taught, and mentored boys aged 10–14 in Bible studies and life skills'
-      - 'Prepared, organized, and orchestrated large-scale group activities and supervised worship sessions and sermons'
-      - 'Planned, set-up, and ran games, prepared snacks, and supervised other activities'
-  - where: 'Eagle Bay Camp'
-    when: 'Aug 2015, Jul 2017'
-    position: 'Leader in Training'
-    location: 'Eagle Bay, BC'
+      - "Led, taught, and mentored boys aged 10–14 in Bible studies and life skills"
+      - "Prepared, organized, and orchestrated large-scale group activities and supervised worship sessions and sermons"
+      - "Planned, set-up, and ran games, prepared snacks, and supervised other activities"
+  - where: "Eagle Bay Camp"
+    when: "Aug 2015, Jul 2017"
+    position: "Leader in Training"
+    location: "Eagle Bay, BC"
     what:
-      - 'Ensured the mental and physical well-being of children, first under mentorship then independently'
-      - 'Gained leadership skills through group workshop sessions and cabin leading'
-      - 'Helped non-cabin leader staff with their administrative duties'
-      - 'Led group discussions about Christianity, the Bible, and faith'
-      - 'Maintained and cleaned the camp with a group of other Leaders in Training'
-  - where: 'Food for the Hungry &amp; Vernon Alliance Church'
-    when: 'Mar 2016'
-    position: 'Xonca, Guatemala Missions Trip'
-    location: 'Xonca, El Quiché, Guatemala'
+      - "Ensured the mental and physical well-being of children, first under mentorship then independently"
+      - "Gained leadership skills through group workshop sessions and cabin leading"
+      - "Helped non-cabin leader staff with their administrative duties"
+      - "Led group discussions about Christianity, the Bible, and faith"
+      - "Maintained and cleaned the camp with a group of other Leaders in Training"
+  - where: "Food for the Hungry &amp; Vernon Alliance Church"
+    when: "Mar 2016"
+    position: "Xonca, Guatemala Missions Trip"
+    location: "Xonca, El Quiché, Guatemala"
     what:
-      - 'Installed reusable, zero-power water filters in difficult conditions where adaptability was an asset'
-      - 'Taught the indigenous peoples a variety of information despite the language barrier'
+      - "Installed reusable, zero-power water filters in difficult conditions where adaptability was an asset"
+      - "Taught the indigenous peoples a variety of information despite the language barrier"
