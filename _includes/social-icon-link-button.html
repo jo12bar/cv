@@ -1,8 +1,13 @@
-{%- assign _social_icon_link_button__label = "Go to social media page" -%} {%-
-if include.label -%} {%- assign _social_icon_link_button__label = include.label
--%} {%- endif -%} {%- assign _social_icon_link_button__svg_viewbox = "0 0 24 24"
--%} {%- if include.svg_viewbox -%} {%- assign
-_social_icon_link_button__svg_viewbox = include.svg_viewbox -%} {%- endif -%}
+<!-- prettier-ignore -->
+{%- assign _social_icon_link_button__label = "Go to social media page" -%}
+{%- if include.label -%}
+    {%- assign _social_icon_link_button__label = include.label -%}
+{%- endif -%}
+
+{%- assign _social_icon_link_button__svg_viewbox = "0 0 24 24" -%}
+{%- if include.svg_viewbox -%}
+    {%- assign _social_icon_link_button__svg_viewbox = include.svg_viewbox -%}
+{%- endif -%}
 
 <a
   class="mdc-icon-button"
