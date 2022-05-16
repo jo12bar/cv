@@ -1,6 +1,0 @@
-name: "Deploy new CV version"
-description: "Setup Ruby and Nodejs env and build new site version"
-author: "Johann M. Barnard"
-runs:
-  using: "docker"
-  image: "Dockerfile"

@@ -13,10 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Make sure to check out the repo
-      - uses: actions/checkout@v2
-      # Our custom deploy building action
-      - uses: ./.github/actions/build-dist-site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PAGES_REPO_NWO: ${{ github.repository }}
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run build:prod
+
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
