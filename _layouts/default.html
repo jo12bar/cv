@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | relative_url }}">
 
@@ -14,7 +13,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ seo }}
+    {% seo %}
   </head>
   <body class="mdc-typography">
     {% include navigation.html %}
