@@ -2,7 +2,6 @@
 layout: default
 title: "Johann M. Barnard - Awards and Scholarships"
 header: "Awards and Scholarships"
-showHelloIAm: false
 ---
 
 - **National Achievement Award**, 2018-2022

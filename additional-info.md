@@ -2,7 +2,6 @@
 layout: default
 title: "Johann M. Barnard - Additional Infoformation"
 header: "Additional Information"
-showHelloIAm: false
 ---
 
 - **BC Class 5 Drivers License**

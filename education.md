@@ -2,9 +2,7 @@
 layout: default
 title: "Johann M. Barnard - Education"
 header: "Education"
-showHelloIAm: false
 ---
-
 ## University of Alberta
 
 ###### Sep 2018&mdash;Present

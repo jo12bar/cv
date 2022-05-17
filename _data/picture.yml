@@ -1,0 +1,23 @@
+# For picture size-generation presets, as used by jekyll_picture_tag.
+
+presets:
+  # My headshot should be the same size (9rem ~= 144px) on all screens. This
+  # accounts for high-resolution screens:
+  cv-nav-headshot:
+    markup: auto
+    formats: [webp, original]
+    base_width: 144 # approximately equal to 16rem
+    pixel_ratios: [1, 1.25, 1.5, 1.75, 2]
+    crop: "1:1"
+    image_options:
+      webp:
+        lossless: true
+
+  # For hero images at the top of the screen
+  cv-hero:
+    markup: auto
+    formats: [webp, original]
+    widths:
+      [200, 400, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 3000, 4000, 5000]
+    format_quality:
+      webp: 75

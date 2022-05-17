@@ -1,12 +1,8 @@
-title: 'Johann M. Barnard - CV'
-
-sass:
-  sass_dir: _sass
-  style: compressed
+title: "Johann M. Barnard - CV"
 
 compress-site: yes
 
-encoding: 'utf-8'
+encoding: "utf-8"
 compress_html:
   clippings: all
   ignore:
@@ -15,5 +11,11 @@ compress_html:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll_picture_tag
 
-exclude: ['node_modules', 'webpack']
+# Settings for jekyll_picture_tag:
+picture:
+  source: images/_fullsize
+  output: assets/images/resized
+
+exclude: ["node_modules", "webpack"]

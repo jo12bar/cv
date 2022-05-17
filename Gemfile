@@ -5,4 +5,5 @@ gem 'jekyll', '~> 4.2'
 group :jekyll_plugins do
 	gem 'jekyll-sitemap', '~> 1.4.0'
 	gem 'jekyll-seo-tag', '~> 2.8.0'
+	gem 'jekyll_picture_tag', '~> 2.0'
 end

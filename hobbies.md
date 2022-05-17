@@ -1,8 +1,7 @@
 ---
 layout: default
 title: "Johann M. Barnard - Hobbies, Interests, and Extracurricular Involvement"
-header: "Hobbies, Interests, and Extracurricular Involvement"
-showHelloIAm: false
+header: "Hobbies and Interests"
 ---
 
 - Planning on integrating **mechatronics** into degree

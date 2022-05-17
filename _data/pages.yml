@@ -1,28 +1,28 @@
 - name: About Me
   link: /
   icon: person
-  heroImg: about
+  heroImg: about.jpg
 - name: Experience
   link: /experience.html
   icon: work
-  heroImg: experience
+  heroImg: experience.jpg
 - name: Skills
   link: /skills.html
   icon: build
-  heroImg: skills
+  heroImg: skills.jpg
 - name: Education
   link: /education.html
   icon: school
-  heroImg: education
-- name: Hobbies, Interests, and Extracurricular Involvement
+  heroImg: education.jpg
+- name: Hobbies and Interests
   link: /hobbies.html
   icon: party_mode
-  heroImg: hobbies
+  heroImg: hobbies.jpg
 - name: Awards, Scholarships
   link: /awards.html
   icon: flag
-  heroImg: awards
+  heroImg: awards.jpg
 - name: Additional Information
   link: /additional-info.html
   icon: sentiment_satisfied_alt
-  heroImg: additional-info
+  heroImg: additional-info.jpg

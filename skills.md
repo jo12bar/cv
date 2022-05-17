@@ -2,7 +2,6 @@
 layout: default
 title: "Johann M. Barnard - Experience"
 header: "Skills"
-showHelloIAm: false
 ---
 
 ## Technical Skills

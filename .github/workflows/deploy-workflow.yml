@@ -15,6 +15,9 @@ jobs:
       # Make sure to check out the repo
       - uses: actions/checkout@v3
 
+      - name: Install libvips and associated image-handling libraries
+        run: ./install-libvips.sh
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -28,9 +31,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - run: npm ci
+      - name: Install npm dependencies
+        run: npm ci
 
-      - run: npm run build:prod
+      - name: Build webpack part of site (production)
+        run: npm run build:prod
 
       - uses: helaili/jekyll-action@v2
         with:
