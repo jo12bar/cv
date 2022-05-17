@@ -15,9 +15,6 @@ jobs:
       # Make sure to check out the repo
       - uses: actions/checkout@v3
 
-      - name: Install libvips and associated image-handling libraries
-        run: ./install-libvips.sh
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -40,3 +37,5 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          pre_build_commands: |
+            apk --update add vips vips-tools libjpeg libpng libheif libwebp
