@@ -1,0 +1,50 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "NODE_ENV=production webpack",
+    "start-dev-server": "./start-dev-server.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jo12bar/cv.git"
+  },
+  "author": "Johann Barnard <johann.b@telus.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jo12bar/cv/issues"
+  },
+  "homepage": "https://github.com/jo12bar/cv#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "postcss": "^8.4.13",
+    "postcss-loader": "^7.2.4",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "@material/button": "^14.0.0",
+    "@material/card": "^14.0.0",
+    "@material/chips": "^14.0.0",
+    "@material/drawer": "^14.0.0",
+    "@material/elevation": "^14.0.0",
+    "@material/icon-button": "^14.0.0",
+    "@material/layout-grid": "^14.0.0",
+    "@material/list": "^14.0.0",
+    "@material/ripple": "^14.0.0",
+    "@material/top-app-bar": "^14.0.0",
+    "@material/typography": "^14.0.0",
+    "resize-observer-polyfill": "^1.5.1"
+  }
+}
